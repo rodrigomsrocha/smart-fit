@@ -1,3 +1,4 @@
+import { Header } from '@/components/header'
 import type { Metadata } from 'next'
 import localFont from 'next/font/local'
 import './globals.css'
@@ -36,7 +37,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${gotham.className} font-sans`}>{children}</body>
+      <body className={`${gotham.className} font-sans`}>
+        <Header />
+        {children}
+      </body>
     </html>
   )
 }
