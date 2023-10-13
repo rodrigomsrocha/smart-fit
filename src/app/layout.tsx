@@ -8,21 +8,26 @@ const gotham = localFont({
     {
       path: '../../public/fonts/gotham-black.woff2',
       weight: '900',
+      style: 'normal',
     },
     {
       path: '../../public/fonts/gotham-bold.woff2',
       weight: '700',
+      style: 'normal',
     },
     {
       path: '../../public/fonts/gotham-book.woff2',
       weight: '400',
+      style: 'normal',
     },
     {
       path: '../../public/fonts/gotham-light.woff2',
       weight: '300',
+      style: 'normal',
     },
   ],
   variable: '--font-gotham',
+  fallback: ['sans'],
 })
 
 export const metadata: Metadata = {
@@ -39,7 +44,9 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${gotham.className} font-sans`}>
         <Header />
-        {children}
+        <main className="max-w-6xl mx-auto py-32 md:py-24 px-12">
+          {children}
+        </main>
       </body>
     </html>
   )
